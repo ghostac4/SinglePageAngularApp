@@ -1,0 +1,25 @@
+<md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop md-whiteframe="4">
+  <md-content layout-margin>
+    <p>Filter By</p>
+    <md-subheader class="md-no-sticky">Manufacturer</md-subheader>
+    <md-list-item ng-repeat='item in data | uniqueString:"manufacturer"'>
+      <p> {{ item.specs.manufacturer }} </p>
+      <md-checkbox class="md-secondary" ng-click='toggle(item.specs.manufacturer)' aria-label="Manufacturer"></md-checkbox>
+    </md-list-item>
+    <md-subheader class="md-no-sticky">Storage</md-subheader>
+    <md-list-item ng-repeat="item in data | uniqueString:'storage'">
+      <p> {{ item.specs.storage }} </p>
+      <md-checkbox class="md-secondary" ng-click='toggle(item.specs.storage)' aria-label="Storage"></md-checkbox>
+    </md-list-item>
+    <md-subheader class="md-no-sticky">OS</md-subheader>
+    <md-list-item ng-repeat="item in data | uniqueString:'os'">
+      <p> {{ item.specs.os }} </p>
+      <md-checkbox class="md-secondary" ng-click='toggle(item.specs.os)' aria-label="OS"></md-checkbox>
+    </md-list-item>
+    <md-subheader class="md-no-sticky">Camera</md-subheader>
+    <md-list-item ng-repeat="item in data | uniqueString:'camera'">
+      <p> {{ item.specs.camera }} </p>
+      <md-checkbox class="md-secondary" ng-click='toggle(item.specs.camera)' aria-label="Camera"></md-checkbox>
+    </md-list-item>
+  </md-content>
+</md-sidenav>

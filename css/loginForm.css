@@ -1,0 +1,9 @@
+.loginPage{
+  height: 100%;
+}
+.form{
+  width: 80%;
+}
+button.md-button{
+  margin-bottom: 30px;
+}
