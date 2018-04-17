@@ -1,6 +1,7 @@
-<div class='dashboard' id='dashboard'>
+<div class='dashboard' id='dashboard' ng-cloak >
   <md-content layout-padding layout-xs="column" layout="row" layout-wrap layout-align='space-around center'>
-    <md-card class='card' flex-xs='100' ng-repeat='item in data2 | commonString:arrData'>
+    <md-card class='card' flex-gt-sm='30' flex-xs='100' ng-repeat='item in values=(data2| commonString:arrManufacturer
+    :arrStorage:arrOs:arrCamera)'>
       <img ng-src="{{item.image.small}}" class="md-media-sm" alt="img">
       <md-card-title>
         <md-card-title-text>
@@ -9,15 +10,22 @@
       </md-card-title>
       <md-divider></md-divider>
       <md-card-content>
-        <p><b>Manufacturer:</b>{{item.specs.manufacturer}}</p>
-        <p><b>Storage:</b>{{item.specs.storage}} <b>OS:</b>{{item.specs.os}}
-          <p><b>Camera:</b>{{item.specs.camera}}</p>
+        <p><b>Manufacturer : </b>{{item.specs.manufacturer}}</p>
+        <p><b>Storage : </b>{{item.specs.storage}} <b>OS : </b>{{item.specs.os}}
+        <p><b>Camera : </b>{{item.specs.camera}}</p>
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions layout="row" layout-align="space-between center">
         <md-button class='md-raised md-accent' ng-click='showDialog($event,item)'>Buy Now!</md-button>
         <p><b>$ {{item.price}}</b></p>
       </md-card-actions>
+    </md-card>
+    <md-card ng-hide='values.length' style="width:40%;height:600px;" layout='column' layout-align='center center'>
+      <md-card-title>
+        <p class='not-found-text'><b>Oops, No Products matched!!!</b></p>
+      </md-card-title>
+      <img src='assets/notfound.jpg' alt='not found'>
+      <md-divider></md-divider>
     </md-card>
   </md-content>
 </div>
