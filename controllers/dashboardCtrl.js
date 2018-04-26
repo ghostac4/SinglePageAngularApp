@@ -34,6 +34,7 @@ app.controller('dashboardCtrl', function($scope, $mdDialog) {
    */
   function DialogController($scope, $mdDialog, mobileData) {
     $scope.mobileData = mobileData;
+    $scope.firstRate = 0;
     $scope.cancel = function() {
       $mdDialog.cancel();
     };

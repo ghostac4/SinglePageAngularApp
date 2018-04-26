@@ -1,5 +1,6 @@
-<div class='loginPage' layout='row' layout-align='center center'>
-  <md-whiteframe class='md-whiteframe-5dp loginform' flex-gt-md='50' flex-md='70' flex-sm='100'>
+<div class='loginPage' layout='row' layout-align='center center' style="background-image:url('assets/background.jpg');">
+  <md-whiteframe class='md-whiteframe-5dp loginform' flex-gt-md='50' flex-md='70' flex-sm='100'
+  ng-mouseenter='backgoundClear(loginPage1)'>
     <div layout='column' layout-align='center center'>
       <h1>L O G I N</h1>
       <form name='loginForm' class='form'>
@@ -22,7 +23,7 @@
           <label>Password</label>
           <md-icon md-svg-src="bower_components/material-design-icons/action/svg/production/ic_lock_24px.svg"
            class="name"></md-icon>
-          <input type="password" name='pass' ng-model='user.pass' ng-required="true">
+          <input type="password" name='pass' ng-model='user.pass' ng-required="true" >
           <div ng-messages="loginForm.pass.$error" ng-show='loginForm.pass.$invalid && loginForm.pass.$touched'>
             <div ng-message="required" ng-show='loginForm.pass.$error.required'>
               Password field is Required.

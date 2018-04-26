@@ -17,6 +17,10 @@
   }
 }
 
+md-backdrop{
+  position: fixed;
+}
+
 md-backdrop.md-sidenav-backdrop.md-opaque {
   opacity: 0;
 }
@@ -71,4 +75,10 @@ md-backdrop.md-sidenav-backdrop.md-opaque.ng-enter.ng-enter-active {
 .profilebox>h2, h4 {
   margin-top: 8px;
   margin-bottom: 8px;
+}
+.jk-rating-stars-container > a:first-child{
+  display: none;
+}
+.jk-rating-stars-container .star-button{
+  text-shadow: 0.06em 0.04em darkgrey;
 }

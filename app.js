@@ -11,7 +11,7 @@
  *  @since          : 16-04-2018
  *
  ******************************************************************************/
-var app =angular.module('mobileApp',['ui.router','ngMaterial','ngAnimate']);
+var app =angular.module('mobileApp',['ui.router','ngMaterial','ngAnimate','ngMessages','jkAngularRatingStars']);
 
 app.config(function($stateProvider,$urlRouterProvider){
 
@@ -20,7 +20,7 @@ $urlRouterProvider.otherwise('login');
 $stateProvider
    .state('login',{
      url : '/login',
-     templateUrl : 'templates/login.html',
+     templateUrl : 'templates/login.html'
    })
    .state('home',{
      url : '/home',

@@ -4,13 +4,15 @@
     <md-subheader class="md-no-sticky">Manufacturer</md-subheader>
     <md-list-item ng-repeat='item in data | uniqueString:"manufacturer"'>
       <p> {{ item.specs.manufacturer }} </p>
-      <md-checkbox class="md-secondary" ng-click='toggle("manufacturer",item.specs.manufacturer)' aria-label="Manufacturer">
+      <md-checkbox class="md-secondary" ng-click='toggle("manufacturer",item.specs.manufacturer)'
+      aria-label="Manufacturer">
       </md-checkbox>
     </md-list-item>
     <md-subheader class="md-no-sticky">Storage</md-subheader>
     <md-list-item ng-repeat="item in data | uniqueString:'storage'">
       <p> {{ item.specs.storage }} </p>
-      <md-checkbox class="md-secondary" ng-click='toggle("storage",item.specs.storage)' aria-label="Storage"></md-checkbox>
+      <md-checkbox class="md-secondary" ng-click='toggle("storage",item.specs.storage)'
+      aria-label="Storage"></md-checkbox>
     </md-list-item>
     <md-subheader class="md-no-sticky">OS</md-subheader>
     <md-list-item ng-repeat="item in data | uniqueString:'os'">
@@ -20,7 +22,8 @@
     <md-subheader class="md-no-sticky">Camera</md-subheader>
     <md-list-item ng-repeat="item in data | uniqueString:'camera'">
       <p> {{ item.specs.camera }} </p>
-      <md-checkbox class="md-secondary" ng-click='toggle("camera",item.specs.camera)' aria-label="Camera"></md-checkbox>
+      <md-checkbox class="md-secondary" ng-click='toggle("camera",item.specs.camera)'
+      aria-label="Camera"></md-checkbox>
     </md-list-item>
   </md-content>
 </md-sidenav>

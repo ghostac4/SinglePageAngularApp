@@ -1,7 +1,8 @@
 <div class='dashboard' id='dashboard' ng-cloak >
   <md-content layout-padding layout-xs="column" layout="row" layout-wrap layout-align='space-around center'>
-    <md-card class='card' flex-gt-sm='30' flex-xs='100' ng-repeat='item in values=(data2| commonString:arrManufacturer
-    :arrStorage:arrOs:arrCamera)'>
+    <md-card id='{{item.id}}' class='card' flex-gt-sm='30' flex-xs='100'
+    ng-repeat='item in values=(data2| commonString:arrManufacturer:arrStorage:arrOs:arrCamera)'
+    ng-mouseenter='liftCard(item.id)' ng-mouseleave='settlecard(item.id)'>
       <img ng-src="{{item.image.small}}" class="md-media-sm" alt="img">
       <md-card-title>
         <md-card-title-text>

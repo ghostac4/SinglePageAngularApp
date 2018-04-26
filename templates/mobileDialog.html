@@ -1,19 +1,22 @@
 <md-dialog aria-label="Mobile">
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <h2>{{mobileData.name}}</h2>
-        <span flex></span>
-        <md-button class="md-icon-button" ng-click="cancel()">
-          <md-icon md-svg-src="bower_components/material-design-icons/navigation/svg/production/ic_close_24px.svg"
-          aria-label="Close dialog"></md-icon>
-        </md-button>
-      </div>
-    </md-toolbar>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>{{mobileData.name}}</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon md-svg-src="bower_components/material-design-icons/navigation/svg/production/ic_close_24px.svg"
+         aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
 
-    <md-dialog-content>
-      <div class="md-dialog-content">
-        <img style="margin: auto; max-width: 100%;align-self:center;" alt="Mobile Image"
-        src="{{mobileData.image.large}}">
+  <md-dialog-content>
+    <div class="md-dialog-content">
+      <img style="margin: auto; max-width: 100%;align-self:center;" alt="Mobile Image"
+      src="{{mobileData.image.large}}">
+      <md-subheader>Rate Product</md-subheader>
+      <jk-rating-stars rating="firstRate"></jk-rating-stars><span>{{firstRate}} / 5<span>
+                  <md-subheader>Description</md-subheader>
         <p>{{mobileData.description}}</p>
       </div>
     </md-dialog-content>
